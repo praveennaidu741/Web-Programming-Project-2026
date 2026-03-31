@@ -45,6 +45,6 @@ Managing test intervals and UI updates via the JavaScript Event Loop.
 How to Run :
 
 1. GitHub Repository link : https://github.com/praveennaidu741/Web-Programming-Project-2026.git
-2. Live Website link : 
+2. Live Website link : https://praveennaidu741.github.io/Web-Programming-Project-2026/
 
 - P Praveen - 24BAI0119
