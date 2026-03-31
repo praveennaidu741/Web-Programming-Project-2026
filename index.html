@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TURBOTYPE | Professional Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app-container">
+        <h1 class="main-title">TURBOTYPE<span>.</span></h1>
+        <header>
+            <div class="modes">
+                <span class="mode-label">Test Duration:</span>
+                <button class="mode-btn active" onclick="changeMode(15, this)">15s</button>
+                <button class="mode-btn" onclick="changeMode(30, this)">30s</button>
+                <button class="mode-btn" onclick="changeMode(60, this)">60s</button>
+            </div>
+            <button class="main-restart-btn" onclick="restartGame()">RESTART TEST</button>
+        </header>
+
+        <div id="progress-bar-container">
+            <div id="progress-fill"></div>
+        </div>
+
+        <main id="game-view">
+            <div class="stats-row">
+                <div class="stat">Timer: <span id="timer">15</span>s</div>
+                <div class="stat">WPM: <span id="wpm">0</span></div>
+                <div class="stat error-stat">Errors: <span id="mistakes-count">0</span></div>
+            </div>
+
+            <div id="typing-area-container">
+                <div id="words-display" class="words-display"></div>
+                <div id="in-game-results" class="hidden">
+                    <div class="res-content">
+                        <div class="current-stats">
+                            <div class="res-item"><span>WPM</span><h2 id="final-wpm">0</h2></div>
+                            <div class="res-item"><span>ACCURACY</span><h2 id="final-acc">0%</h2></div>
+                            <button class="result-restart-btn" onclick="restartGame()">Try Again</button>
+                        </div>
+                        <div class="leaderboard">
+                            <h3>TOP 5 BEST SCORES</h3>
+                            <ul id="high-scores-list"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="text" id="main-input" autofocus autocomplete="off" placeholder="Start typing here...">
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+:root {
+    --bg: #323437;
+    --main: #e2b714;
+    --sub: #646669;
+    --text: #d1d0c5;
+    --error: #ca4754;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#app-container {
+    width: 950px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 2.8rem;
+    color: var(--sub);
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.main-title span {
+    color: var(--main);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.15);
+    padding: 15px 30px;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.mode-label {
+    color: var(--sub);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+
+.mode-btn {
+    background: none;
+    border: none;
+    color: var(--sub);
+    cursor: pointer;
+    font-weight: bold;
+    font-family: inherit;
+    padding: 5px 15px;
+    transition: 0.2s;
+}
+
+.mode-btn.active {
+    color: var(--main);
+    border-bottom: 2px solid var(--main);
+}
+
+.main-restart-btn {
+    background: var(--main);
+    color: var(--bg);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#progress-bar-container {
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 3px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+#progress-fill {
+    width: 100%;
+    height: 100%;
+    background: var(--main);
+    transition: width 0.3s linear;
+}
+
+.stats-row {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    color: var(--main);
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat span {
+    color: var(--text);
+}
+
+.words-display {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    height: 130px;
+    overflow: hidden;
+    color: var(--sub);
+    text-align: left;
+    position: relative;
+    margin-bottom: 3.5rem; /* Space between text and input box */
+}
+
+.letter.correct {
+    color: var(--text);
+}
+
+.letter.incorrect {
+    color: var(--error);
+    background: rgba(202, 71, 84, 0.15);
+    border-radius: 3px;
+}
+
+#main-input {
+    width: 100%;
+    padding: 20px;
+    background: rgba(0,0,0,0.25);
+    border: 2px solid var(--sub);
+    border-radius: 12px;
+    color: var(--main);
+    font-family: inherit;
+    font-size: 1.3rem;
+    outline: none;
+}
+
+#in-game-results {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.res-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 6rem;
+}
+
+.leaderboard {
+    text-align: left;
+    border-left: 1px solid var(--sub);
+    padding-left: 3rem;
+}
+
+.leaderboard h3 {
+    font-size: 0.9rem;
+    color: var(--main);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+#high-scores-list {
+    list-style: none;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+#high-scores-list li {
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 4px;
+}
+
+#high-scores-list li span {
+    color: var(--main);
+    font-weight: bold;
+}
+
+.res-item span {
+    display: block;
+    font-size: 1rem;
+    color: var(--sub);
+    text-transform: uppercase;
+}
+
+.res-item h2 {
+    font-size: 4rem;
+    color: var(--main);
+    margin-bottom: 1rem;
+}
+
+.result-restart-btn {
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.hidden {
+    display: none !important;
+}
